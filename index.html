@@ -4,9 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+          crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
-    
+    <header class="container-fluid bg-primary text-white mb-4 p-3">
+        <div class="text-center">
+          <h1>Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="container-fluid row min-vh-100 no-gutters">
+        <section class="col-12 col-lg-3 d-flex flex-column" id="serach-from">
+            <h3>Search for a City</h3>
+            <form class="d-flex mb-3" role="text">
+                <input class="form-control" type="text" placeholder="City Name" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Enter</button>
+            </form>
+            <li class="list-group col col-12 d-none d-lg-block px-3" id="searchedCity"></li>
+        </section>
+        <section class="col-lg-9 mt-3 d-flex flex-column px-3" id="weatherInfo">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title d-flex align-items-center" style="height: 100px">
+                    <span id="cityName">Name of City</span>
+                    <span class="px-4" id="currentDate">(MM/DD/YY)</span>
+                    <img id="currentIcon" src=""></img>
+                    </h2>
+                    <p>Temperature: <span id="tempToday"> &degF</span></p>
+                    <p>Humidity: <span id="humidityToday"> &#37</span></p>
+                    <p>Wind Speed: <span id="windSpeedToday"> mph </span></p>
+                </div>
+            </div>
+        
+            <div class="px-6">
+                <h2 class="card-title d-flex align-items-center mt-3" style="height: 50px">5-Day Forecast:</h2>
+                <div class="row justify-content-between px-2">
+                    <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
+                        <p class="card-title" id="Date1">MM/DD/YY</p>
+                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-1" src=""></img></p>
+                        <p>Temp: <spanid id="tempDay-1"></span> &degF </p>
+                        <p>Humidity: <span id="humidityDay-1"></span> &#37 </p>
+                        <p>Wind Speed: <span id="windSpeedDay-1"> mph </span></p>
+                    </div>
+
+                    <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
+                        <p class="card-title" id="Date-2">MM/DD/YY</p>
+                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-2" src=""></img></p>
+                        <p>Temp: <spanid id="tempDay-2"> &degF </span></p>
+                        <p>Humidity: <span id="humidityDay-2"> &#37 </span></p>
+                        <p>Wind Speed: <span id="windSpeedDay-2"> mph </span></p>
+                    </div>
+
+                    <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
+                        <p class="card-title" id="Date-3">MM/DD/YY</p>
+                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-3" src=""></img></p>
+                        <p>Temp: <spanid id="tempDay-3"> &degF </span></p>
+                        <p>Humidity: <span id="humidityDay-3"> &#37 </span></p>
+                        <p>Wind Speed: <span id="windSpeedDay-3"> mph </span></p>
+                    </div>
+
+                    <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
+                        <p class="card-title" id="Date-4">MM/DD/YY</p>
+                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-4" src=""></img></p>
+                        <p>Temp: <spanid id="tempDay-4"></span> &degF </p>
+                        <p>Humidity: <span id="humidityDay-4"> &#37 </span></p>
+                        <p>Wind Speed: <span id="windSpeedDay-4"> mph </span></p>
+                    </div>
+
+                    <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
+                        <p class="card-title" id="Date-5">MM/DD/YY</p>
+                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-5" src=""></img></p>
+                        <p>Temp: <spanid id="tempDay-5"></span> &degF </p>
+                        <p>Humidity: <span id="humidityDay-5"> &#37 </span></p>
+                        <p>Wind Speed: <span id="windSpeedDay-5"> mph </span></p>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+        crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+     crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <!-- <script>dayjs().format()</script> -->
+    <script src="script.js"></script>  
 </body>
 </html>
