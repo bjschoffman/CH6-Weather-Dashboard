@@ -18,11 +18,11 @@
         </div>
     </header>
 
-    <main class="container-fluid row min-vh-100 no-gutters">
-        <section class="col-12 col-lg-3 d-flex flex-column" id="serach-from">
+    <main class="container-fluid row min-vh-100">
+        <section class="col-12 col-lg-3 d-flex flex-column">
             <h3>Search for a City</h3>
-            <form class="d-flex mb-3" role="text">
-                <input class="form-control" type="text" placeholder="City Name" aria-label="Search">
+            <form class="d-flex mb-3" id="search-form" role="text">
+                <input class="form-control" type="text" id="putCity" placeholder="City Name" aria-label="Search">
                 <button class="btn btn-primary" type="submit">Enter</button>
             </form>
             <li class="list-group col col-12 d-none d-lg-block px-3" id="searchedCity"></li>
@@ -45,8 +45,9 @@
                 <h2 class="card-title d-flex align-items-center mt-3" style="height: 50px">5-Day Forecast:</h2>
                 <div class="row justify-content-between px-2">
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
-                        <p class="card-title" id="Date1">MM/DD/YY</p>
+                        <p class="card-title" id="Date-1">MM/DD/YY</p>
                         <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-1" src=""></img></p>
+                        <img id="Icon-1" src=""></img>
                         <p>Temp: <spanid id="tempDay-1"></span> &degF </p>
                         <p>Humidity: <span id="humidityDay-1"></span> &#37 </p>
                         <p>Wind Speed: <span id="windSpeedDay-1"> mph </span></p>
@@ -55,6 +56,7 @@
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
                         <p class="card-title" id="Date-2">MM/DD/YY</p>
                         <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-2" src=""></img></p>
+                        <img id="Icon-2" src=""></img>
                         <p>Temp: <spanid id="tempDay-2"> &degF </span></p>
                         <p>Humidity: <span id="humidityDay-2"> &#37 </span></p>
                         <p>Wind Speed: <span id="windSpeedDay-2"> mph </span></p>
@@ -63,6 +65,7 @@
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
                         <p class="card-title" id="Date-3">MM/DD/YY</p>
                         <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-3" src=""></img></p>
+                        <img id="Icon-3" src=""></img>
                         <p>Temp: <spanid id="tempDay-3"> &degF </span></p>
                         <p>Humidity: <span id="humidityDay-3"> &#37 </span></p>
                         <p>Wind Speed: <span id="windSpeedDay-3"> mph </span></p>
@@ -71,6 +74,7 @@
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
                         <p class="card-title" id="Date-4">MM/DD/YY</p>
                         <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-4" src=""></img></p>
+                        <img id="Icon-4" src=""></img>
                         <p>Temp: <spanid id="tempDay-4"></span> &degF </p>
                         <p>Humidity: <span id="humidityDay-4"> &#37 </span></p>
                         <p>Wind Speed: <span id="windSpeedDay-4"> mph </span></p>
@@ -79,6 +83,7 @@
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
                         <p class="card-title" id="Date-5">MM/DD/YY</p>
                         <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-5" src=""></img></p>
+                        <img id="Icon-5" src=""></img>
                         <p>Temp: <spanid id="tempDay-5"></span> &degF </p>
                         <p>Humidity: <span id="humidityDay-5"> &#37 </span></p>
                         <p>Wind Speed: <span id="windSpeedDay-5"> mph </span></p>
