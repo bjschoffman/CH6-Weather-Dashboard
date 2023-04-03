@@ -8,7 +8,7 @@
           rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
           crossorigin="anonymous">
     
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/style.css"/>
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -17,76 +17,74 @@
           <h1>Weather Dashboard</h1>
         </div>
     </header>
-
-    <main class="container-fluid row min-vh-100">
-        <section class="col-12 col-lg-3 d-flex flex-column">
-            <h3>Search for a City</h3>
-            <form class="d-flex mb-3" id="search-form" role="text">
-                <input class="form-control" type="text" id="putCity" placeholder="City Name" aria-label="Search">
+    
+    <main class="container-fluid row">
+        <section class="col-lg-3 d-flex flex-column">
+            <h2>Search by City</h2>
+            <form class="d-flex mb-3" role="text">
+                <input class="form-control" type="text" id="getCity" placeholder="City Name" aria-label="Search">
                 <button class="btn btn-primary" type="submit">Enter</button>
-            </form>
-            <li class="list-group col col-12 d-none d-lg-block px-3" id="searchedCity"></li>
+            </form> 
+            
+            <div class="list-group" id="searchedCity"></div>
         </section>
+
         <section class="col-lg-9 mt-3 d-flex flex-column px-3" id="weatherInfo">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title d-flex align-items-center" style="height: 100px">
-                    <span id="cityName">Name of City</span>
-                    <span class="px-4" id="currentDate">(MM/DD/YY)</span>
-                    <img id="currentIcon" src=""></img>
+                    <h2 class="card-title d-flex flex-wrap align-items-center" >
+                        <span id="cityName">Name of City</span>
+                        <span class="px-3" id="currentDate"></span>
+                        <img id="currentIcon" src=""></img>
                     </h2>
-                    <p>Temperature: <span id="tempToday"> &degF</span></p>
-                    <p>Humidity: <span id="humidityToday"> &#37</span></p>
-                    <p>Wind Speed: <span id="windSpeedToday"> mph </span></p>
+                    <p>Temperature: <span id="tempToday"></span> &degF</p>
+                    <p>Humidity: <span id="humidityToday"></span> &#37</p>
+                    <p>Wind Speed: <span id="windSpeedToday"></span> mph</p>
                 </div>
             </div>
         
             <div class="px-6">
-                <h2 class="card-title d-flex align-items-center mt-3" style="height: 50px">5-Day Forecast:</h2>
+                <h2 class="card-title d-flex align-items-center mt-3">5-Day Forecast:</h2>
+                
                 <div class="row justify-content-between px-2">
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
-                        <p class="card-title" id="Date-1">MM/DD/YY</p>
-                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-1" src=""></img></p>
+                        <p class="card-title" id="Date-1"></p>
                         <img id="Icon-1" src=""></img>
-                        <p>Temp: <spanid id="tempDay-1"></span> &degF </p>
-                        <p>Humidity: <span id="humidityDay-1"></span> &#37 </p>
-                        <p>Wind Speed: <span id="windSpeedDay-1"> mph </span></p>
+                        <p>Temp: <span id="tempDay-1"></span> &degF</p>
+                        <p>Humidity: <span id="humidityDay-1"></span> &#37</p>
+                        <p>Wind Speed: <span id="windSpeedDay-1"></span> mph</p>
                     </div>
 
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
-                        <p class="card-title" id="Date-2">MM/DD/YY</p>
-                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-2" src=""></img></p>
+                        <p class="card-title" id="Date-2"></p>
                         <img id="Icon-2" src=""></img>
-                        <p>Temp: <spanid id="tempDay-2"> &degF </span></p>
-                        <p>Humidity: <span id="humidityDay-2"> &#37 </span></p>
-                        <p>Wind Speed: <span id="windSpeedDay-2"> mph </span></p>
+                        <p>Temp: <span id="tempDay-2"></span> &degF</p>
+                        <p>Humidity: <span id="humidityDay-2"></span> &#37</p>
+                        <p>Wind Speed: <span id="windSpeedDay-2"></span> mph</p>
                     </div>
 
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
-                        <p class="card-title" id="Date-3">MM/DD/YY</p>
-                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-3" src=""></img></p>
+                        <p class="card-title" id="Date-3"></p>
                         <img id="Icon-3" src=""></img>
-                        <p>Temp: <spanid id="tempDay-3"> &degF </span></p>
-                        <p>Humidity: <span id="humidityDay-3"> &#37 </span></p>
-                        <p>Wind Speed: <span id="windSpeedDay-3"> mph </span></p>
+                        <p>Temp: <span id="tempDay-3"></span> &degF</p>
+                        <p>Humidity: <span id="humidityDay-3"></span> &#37</p>
+                        <p>Wind Speed: <span id="windSpeedDay-3"></span> mph</p>
                     </div>
 
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
-                        <p class="card-title" id="Date-4">MM/DD/YY</p>
-                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-4" src=""></img></p>
+                        <p class="card-title" id="Date-4"></p>
                         <img id="Icon-4" src=""></img>
-                        <p>Temp: <spanid id="tempDay-4"></span> &degF </p>
-                        <p>Humidity: <span id="humidityDay-4"> &#37 </span></p>
-                        <p>Wind Speed: <span id="windSpeedDay-4"> mph </span></p>
+                        <p>Temp: <span id="tempDay-4"></span> &degF</p>
+                        <p>Humidity: <span id="humidityDay-4"></span> &#37</p>
+                        <p>Wind Speed: <span id="windSpeedDay-4"></span> mph</p>
                     </div>
 
                     <div class="col-sm-2 card-body bg-primary text-white px-3 m-1">
-                        <p class="card-title" id="Date-5">MM/DD/YY</p>
-                        <p class="card-text" style="height: 100px"><img class="weather-icon" id="iconDay-5" src=""></img></p>
+                        <p class="card-title" id="Date-5"></p>
                         <img id="Icon-5" src=""></img>
-                        <p>Temp: <spanid id="tempDay-5"></span> &degF </p>
-                        <p>Humidity: <span id="humidityDay-5"> &#37 </span></p>
-                        <p>Wind Speed: <span id="windSpeedDay-5"> mph </span></p>
+                        <p>Temp: <span id="tempDay-5"></span> &degF</p>
+                        <p>Humidity: <span id="humidityDay-5"></span> &#37</p>
+                        <p>Wind Speed: <span id="windSpeedDay-5"></span> mph</p>
                     </div>
                 
                 </div>
@@ -103,7 +101,6 @@
      crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <!-- <script>dayjs().format()</script> -->
-    <script src="script.js"></script>  
+    <script src="assets/script.js"></script>  
 </body>
 </html>
