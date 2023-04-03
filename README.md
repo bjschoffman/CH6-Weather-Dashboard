@@ -5,12 +5,12 @@ Server-Side APIs Challenge: Weather Dashboard
 To build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 ## Installation
-Veiw the deployed application: 
+Veiw the deployed application: https://bjschoffman.github.io/CH6-Weather-Dashboard/
 
 ## Usage
 Screenshot of application
 
-![Weather Dashboard Screenshot](assets/images/screenshot.png)
+![Weather Dashboard Screenshot](assets/image/screenshot.png)
    
 
 ## Credits
